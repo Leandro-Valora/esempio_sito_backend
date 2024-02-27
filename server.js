@@ -43,6 +43,7 @@ app.post('/login', (req, res) => {
             return res.json("Error");
         }
         if(data.length > 0) {
+            const name = data[0].Name;
             return res.json("Success");
         } else {
             return res.json("Failed");
