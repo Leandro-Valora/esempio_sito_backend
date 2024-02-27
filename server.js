@@ -43,8 +43,8 @@ app.post('/login', (req, res) => {
             return res.json("Error");
         }
         if(data.length > 0) {
-            const name = data[0].Name;
-            return res.json("Success");
+            const nameU = data[0].Name;
+            return res.json({ status: "Success", name: nameU });
         } else {
             return res.json("Failed");
         }
