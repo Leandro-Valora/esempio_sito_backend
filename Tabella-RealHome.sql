@@ -149,3 +149,13 @@ CREATE TABLE ScambioEmail (
 
 INSERT INTO ScambioEmail (Email_richiedente, Id_agente, Titolo, Descrizione_email) VALUE 
 ('simon@gmail.com', '1', 'Appuntamento da fissare', 'richiesta per fissare un appuntamento per domani');
+
+
+CREATE TABLE Preferita (
+ Id_prefe INT PRIMARY KEY AUTO_INCREMENT,
+ Id_user INT NOT NULL,
+ Id_casaPref INT NOT NULL,
+ FOREIGN KEY (Id_casaPref) REFERENCES Casa(Id_casa)
+);
+
+INSERT INTO Preferita (Id_user, Id_casaPref) VALUE ('3', '36');
